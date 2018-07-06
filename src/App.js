@@ -26,7 +26,7 @@ class App extends Component {
 function SayFullName(props) {
   return (
     <div>
-      <h1> {props.greeting} I'm {props.name} {props.surname} </h1>
+      <h1> {props.greeting} I am {props.name} {props.surname} </h1>
       <p>Down below you can get in contact with me 👇</p>
       <a href={props.link}> Link on my profile </a>
     </div>
