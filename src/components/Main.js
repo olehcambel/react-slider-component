@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Row from 'react-bootstrap/lib/Row'
-import Col from 'react-bootstrap/lib/Col'
-import styled from 'styled-components';
+import Row from "react-bootstrap/lib/Row";
+import Col from "react-bootstrap/lib/Col";
+import styled from "styled-components";
+
+import Slider from "./Slider";
 
 const Repair = styled.div`
   color: #fff;
@@ -11,12 +13,12 @@ const Repair = styled.div`
   line-height: 50px;
   font-size: 40px;
 
-  span{
+  span {
     display: block;
     line-height: 30px;
-    font-size: 24px
+    font-size: 24px;
   }
-`
+`;
 
 const LightText = styled.div`
   color: #fff;
@@ -24,7 +26,7 @@ const LightText = styled.div`
   font-weight: 300;
   line-height: 28px;
   margin-top: 54px;
-`
+`;
 
 const CallbackBtn = styled.button`
   width: 248px;
@@ -34,36 +36,38 @@ const CallbackBtn = styled.button`
   color: #fff;
   font-size: 18px;
   font-weight: bold;
-  line-height:24px;
+  line-height: 24px;
   margin-top: 32px;
-`
+`;
 
 class Main extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      min: 120,
-    }
+      min: 120
+    };
   }
 
   render() {
     return (
       <Row>
         <Col lg={5}>
-          <Repair>Качественный ремонт
+          <Repair>
+            Качественный ремонт
             <span>iphone за {this.state.min} минут и гарантия 1 год</span>
           </Repair>
-          <LightText> Оставьте заявку на бесплатную диагностику без очереди, и получите защитное стекло, стоимостью 1000 юань, с установкой в подарок </LightText>
-          <CallbackBtn>Отправить заявку
-
-          </CallbackBtn>
+          <LightText>
+            Оставьте заявку на бесплатную диагностику без очереди, и получите
+            защитное стекло, стоимостью 1000 юань, с установкой в подарок
+          </LightText>
+          <CallbackBtn>Отправить заявку</CallbackBtn>
         </Col>
         <Col lg={6} lgOffset={1}>
-
+          <Slider />
         </Col>
       </Row>
-    )
+    );
   }
 }
 
-export default Main
+export default Main;
