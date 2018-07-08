@@ -3,7 +3,7 @@
 }
 
 .App {
-  box-sizing: content-box;
-  font-family: "Roboto";
   width: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto";
 }

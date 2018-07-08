@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// import '../App.css';
 
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
+import Row from 'react-bootstrap/lib/Row'
+import Col from 'react-bootstrap/lib/Col'
 import styled from 'styled-components';
 
 import Link from './Link'
@@ -15,20 +14,20 @@ const List = styled.ul`
   height: 49px;
 `
 
-class Header extends React.Component {
+class Header extends React.Component{
   render() {
     return (
-      <Row>
-        <Col lg={12} >
+      <Row> 
+        <Col lg={12}>
           <nav>
             <List>
-              <Link link='#' text='Вызов мастера'></Link>
-              <Link link='#' text='Прайс на ремонт'></Link>
-              <Link link='#' text='Наши преимущества'></Link>
-              <Link link='#' text='Схема работы'></Link>
-              <Link link='#' text='Отзывы клиентов'></Link>
-              <Link link='#' text='Примеры работ'></Link>
-              <Link link='#' text='Контакты'></Link>
+              <Link link='#' text='Вызов мастера' />
+              <Link link='#' text='Прайс на ремонт' />
+              <Link link='#' text='Наши преимущества' />
+              <Link link='#' text='Схема работы' />
+              <Link link='#' text='Отзывы клиентов' />
+              <Link link='#' text='Примеры работ' />
+              <Link link='#' text='Контакты' />
             </List>
           </nav>
         </Col>

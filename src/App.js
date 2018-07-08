@@ -20,7 +20,7 @@ const HeaderWrapper = styled.header`
 
 const MenuWrapper = styled.div`
   height: 89px;
-  padding-top: 23px;
+  padding: 22px;
 `
 
 const MainWrapper = styled.main`
@@ -28,16 +28,15 @@ const MainWrapper = styled.main`
   padding-top: 130px;
   background: url(${url}) no-repeat;
   background-size: cover;
+
 `
-
-
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <HeaderWrapper>
-          <Grid> 
+          <Grid>
             <Header />
           </Grid>
         </HeaderWrapper>
