@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-
+import React from "react";
+// import logo from "./logo.svg";
 import Grid from "react-bootstrap/lib/Grid";
 import styled from "styled-components";
 
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Main from "./components/Main";
+import "./App.css";
 
 const url = process.env.PUBLIC_URL + "/img/bg.png";
 
@@ -30,28 +29,24 @@ const MainWrapper = styled.main`
   background-size: cover;
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <HeaderWrapper>
-          <Grid>
-            <Header />
-          </Grid>
-        </HeaderWrapper>
-        <MenuWrapper>
-          <Grid>
-            <Menu />
-          </Grid>
-        </MenuWrapper>
-        <MainWrapper>
-          <Grid>
-            <Main />
-          </Grid>
-        </MainWrapper>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <HeaderWrapper>
+      <Grid>
+        <Header />
+      </Grid>
+    </HeaderWrapper>
+    <MenuWrapper>
+      <Grid>
+        <Menu />
+      </Grid>
+    </MenuWrapper>
+    <MainWrapper>
+      <Grid>
+        <Main />
+      </Grid>
+    </MainWrapper>
+  </div>
+);
 
 export default App;

@@ -1,66 +1,52 @@
-import React, { Component } from "react";
+import React from "react";
 
-import Slide_1 from "../img/slide-1.jpg";
-import Slide_2 from "../img/slide-2.jpg";
-import Slide_3 from "../img/slide-3.jpg";
-import Slide_4 from "../img/slide-4.jpg";
+const slides = ["slide-1", "slide-2", "slide-3", "slide-4"].map(img => ({
+  eachSlide: `url(${require(`../img/${img}.jpg`)})`
+}));
+
 class Slider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      slides: [
-        { eachSlide: `url(${Slide_2})` },
-        { eachSlide: `url(${Slide_1})` },
-        { eachSlide: `url(${Slide_3})` },
-        { eachSlide: `url(${Slide_4})` }
-      ],
-      autoplay: false,
-      active: 0,
-      max: 0
-    };
-
-    this.state.max = this.state.slides.length;
-    this.intervalBetweenSlides = this.intervalBetweenSlides.bind(this);
-    this.toggleAutoPlay = this.toggleAutoPlay.bind(this);
-    this.prevOne = this.prevOne.bind(this);
-    this.nextOne = this.nextOne.bind(this);
-  }
+  state = {
+    autoplay: false,
+    active: 0,
+    max: slides.length || 0,
+    slides
+  };
 
   componentDidMount() {
-    this.interval = setInterval(() => this.intervalBetweenSlides(), 3333);
+    this.interval = setInterval(() => this.intervalBetweenSlides(), 3000);
   }
 
   componentWillUnmount() {
     clearInterval(this.interval);
   }
 
-  intervalBetweenSlides() {
+  intervalBetweenSlides = () => {
     if (this.state.autoplay === true) {
       if (this.state.active === this.state.max - 1) {
-        this.state.active = 0;
+        this.setState({ active: 0 });
       } else {
-        this.state.active + 1;
+        this.setState({ active: this.state.active + 1 });
       }
-
-      this.setState({ active: this.state.active });
     }
-  }
+  };
 
-  toggleAutoPlay() {
-    this.setState({ autoplay: !this.state.autoplay });
-  }
+  toggleAutoPlay = () => {
+    this.setState({
+      autoplay: !this.state.autoplay
+    });
+  };
 
-  nextOne() {
+  nextOne = () => {
     this.state.active < this.state.max - 1
       ? this.setState({ active: this.state.active + 1 })
       : this.setState({ active: 0 });
-  }
+  };
 
-  prevOne() {
+  prevOne = () => {
     this.state.active > 0
       ? this.setState({ active: this.state.active - 1 })
       : this.setState({ active: this.state.max - 1 });
-  }
+  };
 
   dots(index, event) {
     this.setState({ active: index });

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
@@ -50,13 +50,10 @@ const CallbackBtn = styled.button`
 `;
 
 class Menu extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      addr: "Ленинская, 303",
-      tel: "8 (846) 922 55 44"
-    };
-  }
+  state = {
+    addr: "Ленинская, 303",
+    tel: "8 (846) 922 55 44"
+  };
 
   Address = () => {
     return <span>{this.state.addr}</span>;

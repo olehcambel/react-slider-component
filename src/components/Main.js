@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-
+import React from "react";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
 import styled from "styled-components";
@@ -40,34 +39,28 @@ const CallbackBtn = styled.button`
   margin-top: 32px;
 `;
 
-class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      min: 120
-    };
-  }
+const Main = () => {
+  // const [min, setMin] = useState(120)
+  const min = 120;
 
-  render() {
-    return (
-      <Row>
-        <Col lg={5}>
-          <Repair>
-            Качественный ремонт
-            <span>iphone за {this.state.min} минут и гарантия 1 год</span>
-          </Repair>
-          <LightText>
-            Оставьте заявку на бесплатную диагностику без очереди, и получите
-            защитное стекло, стоимостью 1000 юань, с установкой в подарок
-          </LightText>
-          <CallbackBtn>Отправить заявку</CallbackBtn>
-        </Col>
-        <Col lg={6} lgOffset={1}>
-          <Slider />
-        </Col>
-      </Row>
-    );
-  }
-}
+  return (
+    <Row>
+      <Col lg={5}>
+        <Repair>
+          Качественный ремонт
+          <span>iphone за {min} минут и гарантия 1 год</span>
+        </Repair>
+        <LightText>
+          Оставьте заявку на бесплатную диагностику без очереди, и получите
+          защитное стекло, стоимостью 1000 юань, с установкой в подарок
+        </LightText>
+        <CallbackBtn>Отправить заявку</CallbackBtn>
+      </Col>
+      <Col lg={6} lgOffset={1}>
+        <Slider />
+      </Col>
+    </Row>
+  );
+};
 
 export default Main;
