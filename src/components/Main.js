@@ -1,9 +1,8 @@
 import React from "react";
-import Row from "react-bootstrap/lib/Row";
-import Col from "react-bootstrap/lib/Col";
+import { Col, Row } from 'react-bootstrap';
 import styled from "styled-components";
 
-import Slider from "./Slider";
+import { Slider } from "./Slider";
 
 const Repair = styled.div`
   color: #fff;

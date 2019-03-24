@@ -1,6 +1,5 @@
 import React from "react";
-// import logo from "./logo.svg";
-import Grid from "react-bootstrap/lib/Grid";
+import { Container } from 'react-bootstrap'
 import styled from "styled-components";
 
 import Header from "./components/Header";
@@ -32,19 +31,19 @@ const MainWrapper = styled.main`
 const App = () => (
   <div className="App">
     <HeaderWrapper>
-      <Grid>
+      <Container>
         <Header />
-      </Grid>
+      </Container>
     </HeaderWrapper>
     <MenuWrapper>
-      <Grid>
+      <Container>
         <Menu />
-      </Grid>
+      </Container>
     </MenuWrapper>
     <MainWrapper>
-      <Grid>
+      <Container>
         <Main />
-      </Grid>
+      </Container>
     </MainWrapper>
   </div>
 );
