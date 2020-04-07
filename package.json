@@ -6,8 +6,8 @@
     "react": "^16.8.5",
     "react-bootstrap": "^1.0.0-beta.6",
     "react-dom": "^16.8.5",
-    "react-scripts": "^2.1.8",
-    "styled-components": "^4.2.0"
+    "react-scripts": "^3.4.1",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,10 +17,10 @@
     "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4",
-    "pretty-quick": "^1.10.0"
+    "prettier": "^2.0.4",
+    "pretty-quick": "^2.0.1"
   },
   "browserslist": [
     ">0.2%",
